@@ -27,7 +27,8 @@ foreach ($events as $event) {
     error_log('Non text message has come');
     continue;
   }
-replyImageMessage($bot, $event->getReplyToken(), "https://www.dropbox.com/home/アプリ/Heroku/linek/imgs/original.png" . $_SERVER["HTTP_HOST"] . "/imgs/original.jpg","https://www.dropbox.com/home/アプリ/Heroku/linek/imgs/preview.png" . $_SERVER["HTTP_HOST"] . "/imgs/preview.jpg");
+replyImageMessage($bot, $event->getReplyToken(), "https://www.dropbox.com/home/アプリ/Heroku/linek/imgs/original.png" . $_SERVER["HTTP_HOST"] . "/imgs/original.png",
+"https://www.dropbox.com/home/アプリ/Heroku/linek/imgs/preview.png" . $_SERVER["HTTP_HOST"] . "/imgs/preview.png");
 }
 function replyTextMessage($bot, $replyToken, $text) {
   $response = $bot->replyMessage($replyToken, new \LINE\LINEBot\MessageBuilder\TextMessageBuilder($text));
